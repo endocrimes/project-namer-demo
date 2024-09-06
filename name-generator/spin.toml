@@ -1,0 +1,18 @@
+spin_manifest_version = 2
+
+[application]
+authors = ["Danielle Lancashire <dani@builds.terrible.systems>"]
+description = ""
+name = "name-generator"
+version = "0.1.0"
+
+[[trigger.http]]
+route = "/generate"
+component = "name-generator"
+
+[component.name-generator]
+source = "target/name-generator.wasm"
+exclude_files = ["**/node_modules"]
+[component.name-generator.build]
+command = "npm run build"
+watch = ["src/**/*.ts", "package.json"]
