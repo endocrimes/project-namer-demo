@@ -12,6 +12,7 @@ component = "name-generator"
 
 [component.name-generator]
 source = "target/name-generator.wasm"
+ai_models = ["llama2-chat"]
 exclude_files = ["**/node_modules"]
 [component.name-generator.build]
 command = "npm run build"

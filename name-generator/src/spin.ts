@@ -32,6 +32,6 @@ async function handleEvent(event: FetchEvent) {
         if (res.getStatus() == 200) {
             res.status(500);
         }
-        res.send(`error in handler: ${e}`);
+        res.send(`error in handler: ${JSON.stringify(e.payload)}`);
     }
 }
